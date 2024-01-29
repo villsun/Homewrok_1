@@ -34,15 +34,17 @@ void Delete_Array(int* p)
 int Min_Index(int* p, int size)
 {
 	int min = p[0];
+	int min_index = 0;
 	for (int i = 1; i < size; i++)
 	{
 		if (p[i] < min)
 		{
 			min = p[i];
+			min_index = i;
 		}
 	}
 
-	return min;
+	return min_index;
 }
 
 
@@ -50,9 +52,16 @@ int main()
 {
 	srand(static_cast<unsigned>(time(nullptr)));
 
-	int* p = Create_Array(10);
-	Fill_Random_Number(p, 10);
-	Show(p, 10);
+	const int SIZE = 10;
+
+	int* p = Create_Array(SIZE);
+	Fill_Random_Number(p, SIZE);
+	Show(p, SIZE);
+	
+	int min_index = Min_Index(p, SIZE);
+
+	cout << "Min Index = " << min_index << endl;
+
 	Delete_Array(p);
 
 	return 0;
