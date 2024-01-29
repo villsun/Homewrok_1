@@ -31,6 +31,20 @@ void Delete_Array(int* p)
 	delete[] p;
 }
 
+int Min_Index(int* p, int size)
+{
+	int min = p[0];
+	for (int i = 1; i < size; i++)
+	{
+		if (p[i] < min)
+		{
+			min = p[i];
+		}
+	}
+
+	return min;
+}
+
 
 int main()
 {
