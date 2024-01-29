@@ -17,6 +17,15 @@ void Fill_Random_Number(int* p, int size)
 	}
 }
 
+void Show(int* p, int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		cout<< p[i]<< ' ';
+	}
+	cout << endl;
+}
+
 void Delete_Array(int* p)
 {
 	delete[] p;
