@@ -8,6 +8,11 @@ int* Create_Array(int size)
 	return p_temp;
 }
 
+void Delete_Array(int* p)
+{
+	delete[] p;
+}
+
 
 int main()
 {
