@@ -36,5 +36,10 @@ int main()
 {
 	srand(static_cast<unsigned>(time(nullptr)));
 
+	int* p = Create_Array(10);
+	Fill_Random_Number(p, 10);
+	Show(p, 10);
+	Delete_Array(p);
+
 	return 0;
 }
